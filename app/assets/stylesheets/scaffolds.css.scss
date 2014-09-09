@@ -1,8 +1,4 @@
-.actions {
-  margin-bottom: 10px;
-}
-
+// http://stackoverflow.com/questions/7454682/customizing-field-with-errors?#comment28977506_19337764
 .field_with_errors {
-  // http://stackoverflow.com/questions/7454682/customizing-field-with-errors?#comment28977506_19337764
   @extend .has-error;
 }
