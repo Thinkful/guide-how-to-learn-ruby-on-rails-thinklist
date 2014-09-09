@@ -1,7 +1,7 @@
 <%= form_for(@listing) do |f| %>
   <% if @listing.errors.any? %>
     <div class="alert alert-danger">
-      <h3><%= pluralize(@listing.errors.count, "error") %> prohibited this listing from being saved:</h3>
+      <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
 
       <ul>
       <% @listing.errors.full_messages.each do |message| %>
