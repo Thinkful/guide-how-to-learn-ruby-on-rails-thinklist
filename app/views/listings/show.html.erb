@@ -12,9 +12,11 @@
   <%= @listing.description %>
 </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @listing.price %>
-</p>
+<% if @listing.price %>
+  <p>
+    <strong>Price:</strong>
+    <%= @listing.price %>
+  </p>
+<% end %>
 
 <%= link_to 'Edit', edit_listing_path(@listing), class: 'btn btn-default' %>
