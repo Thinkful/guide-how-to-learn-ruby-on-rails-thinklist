@@ -1,24 +1,15 @@
 <h1>Listings</h1>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
+<table class="table table-striped">
   <tbody>
     <% @listings.each do |listing| %>
       <tr>
-        <td><%= listing.title %></td>
-        <td><%= listing.description %></td>
-        <td><%= listing.price %></td>
-        <td><%= link_to 'Show', listing %></td>
-        <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
-        <td><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to listing.title, listing %></td>
+        <td class="text-right">
+          <% if listing.price %>
+            $<%= listing.price %>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
