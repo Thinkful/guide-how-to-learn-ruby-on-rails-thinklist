@@ -31,6 +31,11 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
+
+    <% if notice %>
+      <div class="alert alert-success"><%= notice %></div>
+    <% end %>
+
     <%= yield %>
   </div>
 </body>
