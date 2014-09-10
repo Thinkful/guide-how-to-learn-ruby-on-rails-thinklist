@@ -7,7 +7,7 @@
         <td><%= link_to listing.title, listing %></td>
         <td class="text-right">
           <% if listing.price %>
-            $<%= listing.price %>
+            <%= number_to_currency(listing.price) %>
           <% end %>
         </td>
       </tr>

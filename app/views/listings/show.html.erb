@@ -11,7 +11,7 @@
 <% if @listing.price %>
   <p>
     <strong>Price:</strong>
-    <%= @listing.price %>
+    <%= number_to_currency(@listing.price) %>
   </p>
 <% end %>
 
