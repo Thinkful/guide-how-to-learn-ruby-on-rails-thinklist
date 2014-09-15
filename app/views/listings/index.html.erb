@@ -1,20 +1,2 @@
 <h1>Listings</h1>
-
-<% if @listings.empty? %>
-  No listings to display! Go <%= link_to 'create one', new_listing_path %>.
-<% else %>
-  <table class="table table-striped">
-    <tbody>
-      <% @listings.each do |listing| %>
-        <tr>
-          <td><%= link_to listing.title, listing %></td>
-          <td class="text-right">
-            <% if listing.price %>
-              <%= number_to_currency(listing.price) %>
-            <% end %>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-<% end %>
+<%= render partial: 'list', locals: { listings: @listings } %>
