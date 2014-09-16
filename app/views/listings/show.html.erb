@@ -1,4 +1,13 @@
 <p>
+  <strong>Category:</strong>
+  <% if @listing.category %>
+    <%= link_to @listing.category.name, @listing.category %>
+  <% else %>
+    none
+  <% end %>
+</p>
+
+<p>
   <strong>Title:</strong>
   <%= @listing.title %>
 </p>
